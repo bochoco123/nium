@@ -10,5 +10,5 @@ func _ready():
 
 
 func _process(delta):
-	if($Player.position.x - $Floor.position.x) > screen_size.x:
-		$Floor.position.x = $Floor.position.x + screen_size.x
+	$Floor.position.x = $Player.position.x - 100
+	

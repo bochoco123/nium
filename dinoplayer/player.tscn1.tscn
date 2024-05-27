@@ -1,67 +1,67 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmjoks1ljhbhn"]
+[gd_scene load_steps=22 format=3 uid="uid://b2fvepnyfigvp"]
 
-[ext_resource type="Script" path="res://dinoplayer/player.gd" id="1_5gs1q"]
-[ext_resource type="Texture2D" uid="uid://cwcwxkwjf76o3" path="res://dinoplayer/blue.png" id="1_233eo"]
-[ext_resource type="AudioStream" uid="uid://je6ddvb67otp" path="res://dinoplayer/jump.mp3" id="3_4d2mr"]
+[ext_resource type="Script" path="res://dinoplayer/player.gd" id="1_6pslw"]
+[ext_resource type="Texture2D" uid="uid://cwcwxkwjf76o3" path="res://dinoplayer/blue.png" id="2_42vai"]
+[ext_resource type="AudioStream" uid="uid://je6ddvb67otp" path="res://dinoplayer/jump.mp3" id="3_8n7yg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rneep"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(408, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4dy42"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(432, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u68cw"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(456, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dwvdf"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(480, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4ejd"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(504, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvjyh"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(528, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoumx"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(552, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0o2k"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(240, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0d1d"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(336, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0qwqb"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(96, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqam0"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(120, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6bkma"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(144, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gedwj"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(168, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qwffi"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(192, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_47mt7"]
-atlas = ExtResource("1_233eo")
+atlas = ExtResource("2_42vai")
 region = Rect2(216, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_axh6k"]
@@ -139,7 +139,7 @@ size = Vector2(13, 17)
 size = Vector2(138, 72)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_5gs1q")
+script = ExtResource("1_6pslw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(24, 0.912003)
@@ -158,4 +158,4 @@ shape = SubResource("RectangleShape2D_h044x")
 
 [node name="AudioJump" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(24, 0.912003)
-stream = ExtResource("3_4d2mr")
+stream = ExtResource("3_8n7yg")
