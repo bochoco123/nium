@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://w3novn1g4k0d"]
+[gd_scene load_steps=6 format=3 uid="uid://w3novn1g4k0d"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_cq8tj"]
 [ext_resource type="PackedScene" uid="uid://dvutu30v0q0yo" path="res://background/background.tscn" id="1_kh083"]
 [ext_resource type="PackedScene" uid="uid://v7k81mvxdqgm" path="res://floor/floor.tscn" id="2_qt52o"]
 [ext_resource type="PackedScene" uid="uid://cmjoks1ljhbhn" path="res://dinoplayer/player.tscn" id="3_opq0o"]
+[ext_resource type="PackedScene" uid="uid://lmojrj61hxfb" path="res://mob/mob.tscn" id="5_av5k2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cq8tj")
@@ -20,3 +21,6 @@ position = Vector2(503, -108)
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
+
+[node name="MOB" parent="." instance=ExtResource("5_av5k2")]
+position = Vector2(1221, 548)

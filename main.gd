@@ -7,8 +7,12 @@ var PlayerInitialPosition
 func _ready():
 	screen_size = get_window().size
 	PlayerInitialPosition = $Player.position
+	
+func new_game():
+		$Floor.position.x = 0
+		%Player.position = PlayerInitialPosition
 
 
 func _process(delta):
-	$Floor.position.x = $Player.position.x - 100
+	$Floor.position.x = $Player.position.x - 150
 	
