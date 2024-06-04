@@ -11,21 +11,24 @@ func _ready():
 	
 func game_over():
 	Ghud.update_high_score_label()
+	$MOBTimer.stop()
+
 	
 func new_game():
 	print('cami quiere mucho a Jeshua')
 	$Floor.position.x = 0
 	$Player.position = PlayerInitialPosition
 	$MOBTimer.start()
+	Ghud.mob_counter = 0
 
 func _process(delta):
 	$Floor.position.x = $Player.position.x - 150
 
 func _on_mob_timer_timeout():
-	var mob = mob_scene.instantiate()
-	mob.position.x = $Player.position.x + 1500
-	mob.position.y = 640
-	add_child(mob)
-	mob.hit.connect(game_over)
-	$MOBTimer.wait_time = 2 
-	
+	print('cami contó: ', Ghud.mob_counter,'mobs')
+	if Ghud.mob_counter < 2:
+		var mob = mob_scene.instantiate()
+		mob.position.x = $Player.position.x + 1500
+		mob.position.y = 640
+		add_child(mob)
+		mob.hit.connect(game_over)

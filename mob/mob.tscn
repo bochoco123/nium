@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://lmojrj61hxfb"]
+[gd_scene load_steps=5 format=3 uid="uid://lmojrj61hxfb"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_8giqj"]
 [ext_resource type="Texture2D" uid="uid://c7r0mdv8271cq" path="res://icon.svg" id="1_tgawo"]
+[ext_resource type="Texture2D" uid="uid://chvenq4ssesv8" path="res://dinoplayer/rata.png" id="3_kpvk5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hxf2"]
 radius = 58.4015
@@ -14,14 +15,28 @@ script = ExtResource("1_8giqj")
 position = Vector2(-10, -10)
 
 [node name="SpriteA" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-64, -64)
 texture = ExtResource("1_tgawo")
 
 [node name="CollisionA" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-63, -64)
 scale = Vector2(1.05968, 1.02737)
 shape = SubResource("CapsuleShape2D_1hxf2")
 debug_color = Color(0.934755, 0.141345, 0.532725, 0.42)
+
+[node name="Spriterata" type="Sprite2D" parent="."]
+position = Vector2(-54, -24)
+scale = Vector2(2.27644, 2.77498)
+texture = ExtResource("3_kpvk5")
+
+[node name="Collisionrata" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-54, -24)
+scale = Vector2(2.27644, 2.77498)
+polygon = PackedVector2Array(22.5, -6.7, 22.5, 8.5, -22.5, 8.5, -22.5, 1.4, -16.5, 0, -10.5, -8.2, 18.9, -8.5)
+disabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
