@@ -6,16 +6,22 @@ signal hit
 func _ready():
 	Ghud.mob_counter = Ghud.mob_counter + 1
 	var collisions = [
-		$CollisionA
+		$Collisionrabbit,
+		$Collisionpollo,
+		$Collisionroca,
+		$CollisionPolygon2D
 	]
 	var sprites = [
-		$SpriteA
+		$SpriteA,
+		$Spritepollo,
+		$Spriteroca,
+		$Spriteratono
 	]
 	
 	var random_int = randi() % collisions.size()
 	var selected_collision = collisions[random_int]
 	var selected_sprite = sprites[random_int]
-	selected_collision.disabled = false 
+	selected_collision.disabled = false
 	selected_sprite.visible = true
 	selected_collision.visible = true
 

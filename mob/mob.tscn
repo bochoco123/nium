@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://lmojrj61hxfb"]
+[gd_scene load_steps=6 format=3 uid="uid://lmojrj61hxfb"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_8giqj"]
-[ext_resource type="Texture2D" uid="uid://c7r0mdv8271cq" path="res://icon.svg" id="1_tgawo"]
-[ext_resource type="Texture2D" uid="uid://chvenq4ssesv8" path="res://dinoplayer/rata.png" id="3_kpvk5"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hxf2"]
-radius = 58.4015
-height = 124.59
+[ext_resource type="Texture2D" uid="uid://cx475y664jnxl" path="res://dinoplayer/rabbit.png" id="2_qt64k"]
+[ext_resource type="Texture2D" uid="uid://c4lp8goolps68" path="res://dinoplayer/pollo.png" id="3_vkk04"]
+[ext_resource type="Texture2D" uid="uid://dr45yyaxe7rld" path="res://dinoplayer/roquita.png" id="4_eduut"]
+[ext_resource type="Texture2D" uid="uid://ck1a6vsspf1h5" path="res://dinoplayer/ratono.png" id="5_8uy0i"]
 
 [node name="MOB" type="Area2D"]
 script = ExtResource("1_8giqj")
@@ -17,25 +15,53 @@ position = Vector2(-10, -10)
 [node name="SpriteA" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-64, -64)
-texture = ExtResource("1_tgawo")
+scale = Vector2(-0.884031, 0.700762)
+texture = ExtResource("2_qt64k")
 
-[node name="CollisionA" type="CollisionShape2D" parent="."]
+[node name="Spritepollo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-63, -64)
-scale = Vector2(1.05968, 1.02737)
-shape = SubResource("CapsuleShape2D_1hxf2")
-debug_color = Color(0.934755, 0.141345, 0.532725, 0.42)
+position = Vector2(-165.443, -62.6866)
+scale = Vector2(-1.72212, 1.94826)
+texture = ExtResource("3_vkk04")
 
-[node name="Spriterata" type="Sprite2D" parent="."]
-position = Vector2(-54, -24)
-scale = Vector2(2.27644, 2.77498)
-texture = ExtResource("3_kpvk5")
-
-[node name="Collisionrata" type="CollisionPolygon2D" parent="."]
+[node name="Spriteroca" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-54, -24)
-scale = Vector2(2.27644, 2.77498)
-polygon = PackedVector2Array(22.5, -6.7, 22.5, 8.5, -22.5, 8.5, -22.5, 1.4, -16.5, 0, -10.5, -8.2, 18.9, -8.5)
+position = Vector2(-108, -42)
+scale = Vector2(0.420904, 0.463663)
+texture = ExtResource("4_eduut")
+
+[node name="Collisionroca" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-108, -42)
+scale = Vector2(0.420904, 0.463663)
+polygon = PackedVector2Array(-14.8, -77, -12.5, -79.4, -10, -78.3, -10, -76.8, -9.2, -76, -8.5, -76, -1, -79, -1, -76.1, 9.6, -69, 12.5, -69, 18.3, -66.1, 20.5, -68.4, 23, -67.3, 23, -65.4, 23.4, -64, 24.7, -64, 34, -65.3, 34, -63.1, 37, -61.1, 37, -58.2, 45, -53.1, 45, -50.8, 49, -49.4, 49, -46.7, 56, -37.7, 56, -36.4, 60.5, -15, 58.5, -15, 56.5, -6.8, 58.4, -2, 59.8, -2, 79.2, 16.5, 80.9, 14, 83.8, 14, 87, 17.2, 87, 19.7, 84.9, 22.5, 87.7, 35, 88.6, 35, 100, 43, 100, 53, 97.5, 53, 75.5, 66, 74.2, 66, 67.8, 66.8, 66.4, 71, 48.8, 71, 41.8, 78, 39.4, 78, 38.4, 81, 35, 81, -31, 82, -31, 80.7, -53, 76.7, -53, 74.9, -61, 67.9, -61, 65.9, -60.1, 52.8, -83, 46.5, -83, 44.8, -87, 40.8, -87, 34.4, -91.4, 22, -99, 17.1, -99, 14.5, -97.7, 12, -103, 0.199997, -100.9, 0, -99.1, -25, -99.8, -25, -103, -28.2, -103, -31.1, -97, -35.1, -99.4, -37.5, -98.3, -40, -97, -40, -86.1, -56, -84.6, -56, -77.6, -61, -75.4, -61, -74.4, -64, -69.7, -64, -67.2, -69, -65.3, -69, -61, -69.7, -55, -77.7, -55, -80.2)
+disabled = true
+
+[node name="Collisionrabbit" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-69, -64)
+scale = Vector2(1.01654, 0.727276)
+polygon = PackedVector2Array(-2.5, -61.9, 3.5, -56.9, 3.5, -58, 5.6, -58, 10.6, -64, 21.5, -64, 21.5, -61.9, 27.5, -56.9, 27.5, -34.9, 39.5, -24.9, 39.5, -19.2, 43.5, -17.2, 43.5, 10, 41.3, 10, 29.5, 21.8, 29.5, 23, 31, 28, 32.3, 28, 35.5, 31.2, 35.5, 46, 33.2, 46, 27.5, 50.9, 27.5, 60.8, 24.3, 64, 14.5, 64, 8.5, 56, -1.5, 56, -7.5, 64, -17.3, 64, -20.5, 60.8, -20.5, 51, -28.5, 45, -28.5, 30.8, -24.5, 28.8, -24.5, 23.4, -23.5, 21.8, -36.5, 8.8, -36.5, -18, -34.1, -18, -32.5, -19.1, -32.5, -26, -30.2, -26, -20.5, -34.9, -20.5, -56.9, -14.5, -61.9, -14.5, -64, -2.5, -64)
+disabled = true
+
+[node name="Collisionpollo" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-165.443, -62.6866)
+rotation = -3.14159
+scale = Vector2(1.72212, -1.94826)
+polygon = PackedVector2Array(20, -57.9, 30, -48.9, 30, -35, 38, -29, 38, -23.2, 42, -21.2, 42, 6, 39.8, 6, 28, 17.8, 28, 19, 29.5, 24, 30.8, 24, 38, 31.2, 38, 46, 35.4, 46, 26, 47.7, 26, 56.8, 22.8, 60, 13, 60, 7, 52, -2, 52, -2, 52.8, -9.2, 60, -20, 60, -20, 57.4, -21.7, 48, -30.8, 48, -34, 44.8, -34, 31, -26, 25, -26, 19.4, -25, 17.8, -38, 4.8, -38, -22, -35.6, -22, -34, -23.1, -34, -30, -31.7, -30, -26, -34.9, -26, -46, -23.8, -46, -12, -57.8, -12, -60, 20, -60)
+disabled = true
+
+[node name="Spriteratono" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(-0.926467, 1.22948)
+texture = ExtResource("5_8uy0i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+rotation = -3.14159
+scale = Vector2(0.926467, -1.22948)
+polygon = PackedVector2Array(-26, -40.4, -20, -35.4, -20, -32.4, 32, -34.4, 32, -35.3, 39.2, -42.5, 58, -42.5, 58, -40.4, 64, -35.4, 64, -4.5, 61.9, -4.5, 56.9, 1.5, 48, 1.5, 48, 10.4, 34, 23.4, 34, 24.5, 35.5, 29.5, 36.8, 29.5, 40, 32.7, 40, 47.5, 37.7, 47.5, 32, 52.4, 32, 62.3, 28.8, 65.5, 19, 65.5, 13, 57.5, 4, 57.5, 4, 58.3, -3.2, 65.5, -14, 65.5, -14, 62.9, -15.7, 53.5, -17, 53.5, -23, 45.5, -32.8, 45.5, -44, 34.3, -44, 16.7, -36.8, 9.5, -31.1, 9.5, -31.8, 1.5, -44.8, 1.5, -52, -5.7, -52, -35.4, -46, -40.4, -46, -42.5, -26, -42.5)
 disabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
