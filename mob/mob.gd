@@ -6,23 +6,25 @@ signal hit
 func _ready():
 	Ghud.mob_counter = Ghud.mob_counter + 1
 	var collisions = [
-		$Collisionrabbit,
+		$CollisionRARO,
 		$Collisionpollo,
 		$Collisionroca,
-		$CollisionPolygon2D
+		$CollisionPolygon2D,
+		$Collisiongato
 	]
 	var sprites = [
-		$SpriteA,
+		$SpriteRARO,
 		$Spritepollo,
 		$Spriteroca,
-		$Spriteratono
+		$Spriteratono,
+		$Spritegato
 	]
 	
 	var random_int = randi() % collisions.size()
 	var selected_collision = collisions[random_int]
 	var selected_sprite = sprites[random_int]
 	selected_collision.disabled = false
-	selected_sprite.visible = true
+	selected_sprite .visible  = true 
 	selected_collision.visible = true
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
